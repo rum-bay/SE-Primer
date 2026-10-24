@@ -6,6 +6,6 @@ AI Studio çalışma alanı:
 
 https://aistudio.google.com/apps/89ef902a-d7ef-4e27-bf7e-0d3352aa11f9?showPreview=true&showAssistant=true
 
-Son erişilebilen ekran, Gemini'nin uygulama dosyalarını üretmekte olduğunu gösteriyordu. Tamamlandığı ve önizlemenin açıldığı doğrulanmadı. Bu bağlantı hesap içindeki çalışma alanıdır; öğretmene verilebilecek dış bağlantı için uygulama üretimi tamamlanmalı ve Publish/Share (Yayımla/Paylaş) adımı kullanılmalıdır. Çalışma alanı herkese açık yayımlanacaksa, bağlantıyı kimlerin görebileceğini yayımlama öncesi kontrol et.
+ Çalışan uygulama
 
-Gemini API anahtarı veya gerçek hasta verisi prompta eklenmedi.
+[SE Primer uygulamasını aç](https://ai.studio/apps/89ef902a-d7ef-4e27-bf7e-0d3352aa11f9)
