@@ -1,0 +1,19 @@
+{
+  "name": "se-primer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobil öncelikli yazılım mühendisliği karar simülatörü",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "eval:tutor": "node scripts/evaluate-tutor.mjs"
+  },
+  "devDependencies": {
+    "cypress": "^16.2.0"
+  },
+  "allowScripts": {
+    "cypress@16.2.0": true
+  }
+}

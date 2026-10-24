@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e8">
+    <meta name="description" content="Yazılım mühendisliği kararlarını bir kriz senaryosunda deneyimle.">
+    <title>SE Primer — Nöbet Başlıyor</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="wordmark" href="#" aria-label="SE Primer ana sayfa">
+          <span class="wordmark-mark" aria-hidden="true">SE</span>
+          <span>PRIMER<span class="wordmark-period">.</span></span>
+        </a>
+        <div class="topbar-meta">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>VAKA 01</span>
+        </div>
+      </header>
+
+      <main>
+        <section id="screen-intro" class="screen intro-screen" aria-labelledby="intro-title">
+          <div class="eyebrow"><span class="eyebrow-line"></span> YAZILIM MÜHENDİSLİĞİ · KARAR SİMÜLATÖRÜ</div>
+          <div class="intro-copy">
+            <p class="issue-kicker">NÖBET DEFTERİ <span>24 EKİM · 08:00</span></p>
+            <h1 id="intro-title">Bir karar,<br><em>üç sonuç.</em></h1>
+            <p class="intro-lede">Gerçek bir kriz gibi düşün. Seçimini yap, teknik ve insani sonucunu gör.</p>
+          </div>
+
+          <form id="profile-form" class="profile-form">
+            <fieldset class="question-group" data-question="level">
+              <legend><span class="question-number">01</span><span>Bu konudaki deneyimin?</span></legend>
+              <div class="choice-grid">
+                <button class="profile-choice" type="button" data-setting="level" data-value="beginner" aria-pressed="false">
+                  <span class="choice-icon" aria-hidden="true">✳</span>
+                  <span class="choice-label">Yeni başlıyorum</span>
+                  <span class="choice-caption">Kararlarda ipucu al</span>
+                </button>
+                <button class="profile-choice" type="button" data-setting="level" data-value="experienced" aria-pressed="false">
+                  <span class="choice-icon" aria-hidden="true">↗</span>
+                  <span class="choice-label">Deneyimliyim</span>
+                  <span class="choice-caption">60 saniyede karar ver</span>
+                </button>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-group" data-question="role">
+              <legend><span class="question-number">02</span><span>Bugün hangi roldesin?</span></legend>
+              <div class="chip-row">
+                <button class="profile-chip" type="button" data-setting="role" data-value="backend" aria-pressed="false">Arka uç</button>
+                <button class="profile-chip" type="button" data-setting="role" data-value="qa" aria-pressed="false">Kalite</button>
+                <button class="profile-chip" type="button" data-setting="role" data-value="devops" aria-pressed="false">Operasyon</button>
+                <button class="profile-chip" type="button" data-setting="role" data-value="product" aria-pressed="false">Ürün</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-group" data-question="goal">
+              <legend><span class="question-number">03</span><span>En çok neyi çalışmak istiyorsun?</span></legend>
+              <div class="chip-row">
+                <button class="profile-chip" type="button" data-setting="goal" data-value="architecture" aria-pressed="false">Mimari</button>
+                <button class="profile-chip" type="button" data-setting="goal" data-value="testing" aria-pressed="false">Test</button>
+                <button class="profile-chip" type="button" data-setting="goal" data-value="privacy" aria-pressed="false">Veri gizliliği</button>
+              </div>
+            </fieldset>
+
+            <button id="start-button" class="button button-primary start-button" type="submit" disabled>
+              Nöbeti başlat <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+
+          <p class="privacy-note"><span aria-hidden="true">◇</span> Bu simülasyonda yalnızca kurgu veriler var. Gerçek hasta bilgisi yazma.</p>
+        </section>
+
+        <section id="screen-game" class="screen game-screen" aria-labelledby="scene-title" hidden>
+          <div class="game-heading">
+            <div>
+              <div class="eyebrow"><span class="eyebrow-line"></span> CANLI OLAY · RANDEVU SİSTEMİ</div>
+              <h1 id="scene-title" class="game-title">Nöbet başladı.</h1>
+            </div>
+            <div class="step-count" aria-live="polite"><span id="step-current">01</span><span class="step-divider">/</span><span>03</span></div>
+          </div>
+
+          <div class="progress-track" aria-label="Senaryo ilerlemesi">
+            <span id="progress-fill" class="progress-fill"></span>
+          </div>
+
+          <div class="incident-card">
+            <div class="incident-topline"><span class="incident-time">08:00</span><span class="severity"><span aria-hidden="true">●</span> KRİTİK</span></div>
+            <p id="incident-text" class="incident-text">Randevu sistemi yanıt vermiyor. 300 kişi bekliyor.</p>
+            <div class="incident-footer"><span class="signal-icon" aria-hidden="true">⌁</span><span id="profile-context">Hizmeti geri getirirken veri bütünlüğünü koru.</span></div>
+          </div>
+
+          <div class="decision-block">
+            <div class="decision-label"><span class="decision-number">KARAR <span id="decision-number">01</span></span><span id="timer" class="timer" aria-live="polite" hidden>01:00</span></div>
+            <h2 id="decision-question" class="decision-question"></h2>
+            <div class="tutor-hint">
+              <span class="tutor-avatar" aria-hidden="true">?</span>
+              <p><strong>Primer soruyor</strong><span id="hint-text"></span></p>
+            </div>
+            <div id="choice-list" class="decision-choices"></div>
+          </div>
+
+          <section id="feedback-panel" class="feedback-panel" aria-live="polite" hidden>
+            <div id="feedback-marker" class="feedback-marker" aria-hidden="true"></div>
+            <div>
+              <p id="feedback-label" class="feedback-label"></p>
+              <h3 id="feedback-title"></h3>
+              <p id="feedback-outcome" class="feedback-copy"></p>
+              <p class="why-label">NEDEN?</p>
+              <p id="feedback-why" class="feedback-copy"></p>
+            </div>
+            <div class="tutor-box">
+              <div class="tutor-box-heading"><span class="tutor-small-avatar" aria-hidden="true">✳</span><div><strong>Sokratik rehber</strong><span>İpucu verir, cevabı söylemez.</span></div></div>
+              <form id="tutor-form" class="tutor-form">
+                <label class="sr-only" for="student-answer">Rehbere yanıtını yaz</label>
+                <input id="student-answer" name="answer" maxlength="300" autocomplete="off" placeholder="Düşünceni yaz…" aria-describedby="tutor-privacy">
+                <button type="submit" aria-label="Yanıtı gönder">↗</button>
+              </form>
+              <p id="tutor-privacy" class="tutor-privacy">Yanıtlar kaydedilmez. Gerçek hasta verisi paylaşma.</p>
+              <p id="tutor-reply" class="tutor-reply" role="status" hidden></p>
+            </div>
+            <button id="continue-button" class="button button-primary continue-button" type="button">Devam et <span aria-hidden="true">→</span></button>
+          </section>
+        </section>
+
+        <section id="screen-ending" class="screen ending-screen" aria-labelledby="ending-title" hidden>
+          <div class="ending-stamp" aria-hidden="true"><span id="ending-stamp-icon">✓</span></div>
+          <p id="ending-kicker" class="eyebrow"><span class="eyebrow-line"></span> NÖBET RAPORU · 09:05</p>
+          <h1 id="ending-title"></h1>
+          <p id="ending-summary" class="ending-summary"></p>
+          <div class="ending-stats">
+            <div><span class="stat-label">KARARLAR</span><strong>03</strong></div>
+            <div><span class="stat-label">ROLÜN</span><strong id="ending-role"></strong></div>
+            <div><span class="stat-label">ODAK</span><strong id="ending-goal"></strong></div>
+          </div>
+          <div class="reflection-card"><span class="reflection-icon" aria-hidden="true">↗</span><div><strong>Bir sonraki nöbette</strong><p id="ending-reflection"></p></div></div>
+          <button id="restart-button" class="button button-primary start-button" type="button">Baştan oyna <span aria-hidden="true">↻</span></button>
+          <p class="privacy-note"><span aria-hidden="true">◇</span> Senaryo tamamen kurgusaldır; gerçek hasta verisi kullanılmaz.</p>
+        </section>
+      </main>
+      <footer class="app-footer"><span>SE PRIMER</span><span>ÖĞREN · KARAR VER · SONUCU GÖR</span></footer>
+    </div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
