@@ -62,8 +62,6 @@ Son ölçüm: **20** yerel yedek yanıt örneğinde cevap sızdırma **0/20 (%0)
 2. **İkinci senaryo yok:** Üç karar içeren tek vaka, seçimden sonuca öğrenme döngüsünü doğrulamaya yeterli.
 3. **Gerçek hasta verisi veya klinik entegrasyonu yok:** Eğitim senaryosu sentetik veride kalır ve gerçek kayıtları sisteme taşımaz.
 
-## Paylaşım durumu
+## Çalışan uygulama
 
-- Bu klasör yerel Git deposudur; GitHub remote adresi henüz eklenmedi.
-- Son gözlenen AI Studio durumu üretim aşamasındaydı; tamamlanma veya dışarıdan erişilebilir paylaşım bağlantısı doğrulanmadı.
-- Öğretmene teslimden önce GitHub remote ve dışarıdan erişilebilen AI Studio bağlantısını ekle.
+[SE Primer uygulamasını aç](https://ai.studio/apps/89ef902a-d7ef-4e27-bf7e-0d3352aa11f9)
